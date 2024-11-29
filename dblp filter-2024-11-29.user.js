@@ -57,7 +57,6 @@
     }
 
     $(".publ-list").ready(function () {
-        // 创建固定容器的 div
         var $container = $('<div></div>')
         .attr('id', 'fixed-container')
         .css({
@@ -74,11 +73,10 @@
             textAlign: 'center'
         });
 
-        // 创建第一个文本框
         var $textbox1 = $('<textarea>')
         .attr('type', 'text')
         .attr('id', 'textbox1')
-        .attr('placeholder', 'include;')
+        .attr('placeholder', 'include keywords, split with ;')
         .css({
             width: '90%',
             margin: '5px 0',
@@ -88,11 +86,10 @@
             borderRadius: '3px'
         });
 
-        // 创建第二个文本框
         var $textbox2 = $('<textarea>')
         .attr('type', 'text')
         .attr('id', 'textbox2')
-        .attr('placeholder', 'exclude')
+        .attr('placeholder', 'exclude keywords, split with ;')
         .css({
             width: '90%',
             margin: '5px 0',
@@ -102,10 +99,9 @@
             borderRadius: '3px'
         });
 
-        // 创建提交按钮
         var $button = $('<button></button>')
         .attr('id', 'submit-button')
-        .text('submit')
+        .text('Filter!')
         .css({
             width: '95%',
             padding: '5px',
