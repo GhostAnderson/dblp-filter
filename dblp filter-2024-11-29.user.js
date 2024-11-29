@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         dblp filter
 // @namespace    http://tampermonkey.net/
-// @version      2024-11-29
+// @version      v0.0.1
 // @description  Filtering dblp result with including keywords and excluding keywords.
 // @author       Laurentiusia
 // @match        https://dblp.org/*
