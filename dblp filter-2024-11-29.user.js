@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         dblp filter
 // @namespace    http://tampermonkey.net/
-// @version      v0.0.1
+// @version      1.0.0
+// @license MIT
 // @description  Filtering dblp result with including keywords and excluding keywords.
 // @author       Laurentiusia
 // @match        https://dblp.org/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=dblp.org
 // @grant        none
-// @require https://code.jquery.com/jquery-3.6.0.min.js
+// @downloadURL https://update.greasyfork.org/scripts/519244/dblp%20filter.user.js
+// @updateURL https://update.greasyfork.org/scripts/519244/dblp%20filter.meta.js
 // ==/UserScript==
 
 (function() {
@@ -136,6 +138,9 @@
 
         // 将容器添加到页面的 body 中
         $('body').append($container);
+        $('.publ-list').on('load.infiniteScroll', function(event, response, path) {
+            handleSubmit();
+        });
     });
 
 
